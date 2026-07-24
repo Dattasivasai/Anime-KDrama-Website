@@ -1,4 +1,4 @@
-```javascript
+
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
 
@@ -60,4 +60,3 @@ watchLinks.forEach((link) => {
         );
     });
 });
-```
