@@ -12,6 +12,17 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="drama.css">
+    <style>
+        .menu-list-item a,
+        .profile-container a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,12 +33,12 @@
             </div>
             <div class="menu-container">
                 <ul class="menu-list">
-                    <li class="menu-list-item active">Home</li>
-                    <li class="menu-list-item">Movies</li>
-                    <li class="menu-list-item">Series</li>
-                    <li class="menu-list-item">Popular</li>
-                    <li class="menu-list-item">Trends</li>
-                    <li class="menu-list-item">MyList</li>
+                    <li class="menu-list-item active"><a href="#home">Home</a></li>
+                    <li class="menu-list-item"><a href="#new-releases">Movies</a></li>
+                    <li class="menu-list-item"><a href="#kdrama">K-Drama</a></li>
+                    <li class="menu-list-item"><a href="#anime">Anime</a></li>
+                    <li class="menu-list-item"><a href="#suggested">Suggested</a></li>
+                    <li class="menu-list-item"><a href="index1.html">Login</a></li>
                 </ul>
             </div>
             <div class="profile-container">
@@ -49,17 +60,17 @@
         </div>
     </div>
     <div class="sidebar"></div>
-    <div class="container">
+    <div class="container" id="home">
         <div class="content-container">
             <div class="featured-content"
                 style="background: linear-gradient(to bottom,rgba(0,0,0,0),#151515), url('https://miro.medium.com/v2/resize:fit:2000/format:webp/1*9fAwL_e64YXaEd8zPExMfw.jpeg');">
                 <img src="https://logos-world.net/wp-content/uploads/2021/08/Haikyuu-Logo.png" alt=""
                     class="featured-title">
                 <p class="featured-desc">Haikyu!! is a Japanese manga series written and illustrated by Haruichi Furudate. It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from February 2012 to July 2020, with its chapters collected in 45 tankōbon volumes.</p>
-                <button class="featured-button"><a href="#" target="_blank" class="btn">Watch</a></button>
+                <button type="button" class="featured-button"><a href="#" class="btn">Watch</a></button>
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <h1 class="movie-list-title" id="new-releases">NEW RELEASES</h1>
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
@@ -67,115 +78,107 @@
                                 alt="Solo Leveling" class="movie-list-item-img">
                             <span class="movie-list-item-title">Solo leveling</span>
 
-                            <button class="movie-list-item-button"><a href="#"
-                                    target="_blank" class="btn">Watch</a></button>
+                            <button type="button" class="movie-list-item-button"><a href="#" class="btn">Watch</a></button>
                         </div>
                         <div class="movie-list-item">
                             <img src="Images/tokyo.jpg" alt="Tokyo Revengers" class="movie-list-item-img">
                             <span class="movie-list-item-title">Tokyo Revengers</span>
 
-                            <button class="movie-list-item-button"><a href="#"
-                                    target="_blank" class="btn">Watch</a></button>
+                            <button type="button" class="movie-list-item-button"><a href="#" class="btn">Watch</a></button>
                         </div>
                         <div class="movie-list-item">
                             <img src="Images/king.jpg" alt="King The Land" class="movie-list-item-img">
                             <span class="movie-list-item-title">King The Land</span>
 
-                            <button class="movie-list-item-button"><a href="#"
-                                    target="_blank" class="btn">Watch</a></button>
+                            <button type="button" class="movie-list-item-button"><a href="#" class="btn">Watch</a></button>
                         </div>
                         <div class="movie-list-item">
                             <img src="https://images.justwatch.com/poster/309462804/s592/season-1"
                                 alt="" class="movie-list-item-img">
                             <span class="movie-list-item-title">My Demon</span>
 
-                            <button class="movie-list-item-button"><a href="#"
-                                    target="_blank" class="btn">Watch</a></button>
+                            <button type="button" class="movie-list-item-button"><a href="#" class="btn">Watch</a></button>
                         </div>
                         <div class="movie-list-item">
                             <img src="Images/demon.jpg" alt="Demon slayer" class="movie-list-item-img">
                                 
                             <span class="movie-list-item-title">Demon slayer</span>
 
-                            <button class="movie-list-item-button"><a href="#"
-                                    target="_blank" class="btn">Watch</a></button>
+                            <button type="button" class="movie-list-item-button"><a href="#" class="btn">Watch</a></button>
                         </div>
                         <div class="movie-list-item">
                             <img src="https://i.pinimg.com/736x/31/82/ed/3182eddfc0a965b641ed6dd45e2193aa.jpg"
                                 alt="" class="movie-list-item-img">
                             <span class="movie-list-item-title">Haikyuu</span>
 
-                            <button class="movie-list-item-button"><a href="#"
-                                    target="_blank" class="btn">Watch</a></button>
+                            <button type="button" class="movie-list-item-button"><a href="#" class="btn">Watch</a></button>
                         </div>
                         <div class="movie-list-item">
                             <img src="Images/mob.jpg" alt="Mob Psycho 100" class="movie-list-item-img">
                             <span class="movie-list-item-title">Mob Psycho 100</span>
 
-                            <button class="movie-list-item-button"><a href="#"
-                                    target="_blank" class="btn">Watch</a></button>
+                            <button type="button" class="movie-list-item-button"><a href="#" class="btn">Watch</a></button>
                         </div>
                         <div class="movie-list-item">
                             <img src="https://img.zorores.com/_r/300x400/100/e8/6e/e86efa8fddec162ec4e8550677cd8a86/e86efa8fddec162ec4e8550677cd8a86.jpg"
                                 alt="" class="movie-list-item-img">
                             <span class="movie-list-item-title">Cyberpunk: Edgerunners</span>
 
-                            <button class="movie-list-item-button"><a href="#"
-                                    target="_blank" class="btn">Watch</a></button>
+                            <button type="button" class="movie-list-item-button"><a href="#" class="btn">Watch</a></button>
                         </div>
                     </div>
                     <i class="fa-solid fa-chevron-right arrow"></i>
                 </div>
             </div>
-            <h1 class="movie-list-title m1">k-Drama</h1>
+            <h1 class="movie-list-title m1" id="kdrama">K-DRAMA</h1>
             <div class="movie-list-wrapper mr1">
                 <div class="movie-list">
                     <div class="movie-list-item">
                         <img src="Images/squid.jpg"
-                            alt="" class="movie-list-item-img">
+                            alt="Squid Game" class="movie-list-item-img">
                         <span class="movie-list-item-title">Squid Game</span>
 
-                        <button class="movie-list-item-button"><a href="#" target="_blank"
+                        <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                                 class="btn">Watch</a></button>
                     </div>
                     <div class="movie-list-item">
                         <img src="Images/all.jpg"
-                            alt="" class="movie-list-item-img">
+                            alt="All of Us Are Dead" class="movie-list-item-img">
                         <span class="movie-list-item-title">All of Us Are Dead</span>
 
-                        <button class="movie-list-item-button"><a href="#" target="_blank"
+                        <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                                 class="btn">Watch</a></button>
                     </div>
                     <div class="movie-list-item">
                         <img src="Images/crash.jpg"
-                            alt="" class="movie-list-item-img">
+                            alt="Crash Landing on You" class="movie-list-item-img">
                         <span class="movie-list-item-title">Crash Landing on You</span>
 
-                        <button class="movie-list-item-button"><a href="#" target="_blank"
+                        <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                                 class="btn">Watch</a></button>
                     </div>
                     <div class="movie-list-item">
                         <img src="Images/Itaewon_Class.jpg"
-                            alt="" class="movie-list-item-img">
+                            alt="Itaewon Class" class="movie-list-item-img">
                         <span class="movie-list-item-title">Itaewon Class</span>
 
-                        <button class="movie-list-item-button"><a href="#" target="_blank"
+                        <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                                 class="btn">Watch</a></button>
                     </div>
                     <div class="movie-list-item">
                         <img src="Images/kingdom.jpg"
-                            alt="" class="movie-list-item-img">
+                            alt="Kingdom" class="movie-list-item-img">
                         <span class="movie-list-item-title">Kingdom</span>
 
-                        <button class="movie-list-item-button"><a href="#" target="_blank"
+                        <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                                 class="btn">Watch</a></button>
                     </div>
                     <div class="movie-list-item">
                         <img src="Images/love.jpg"
-                            alt="" class="movie-list-item-img">
+                            alt="Love Alarm" class="movie-list-item-img">
                         <span class="movie-list-item-title">Love Alarm</span>
 
-                        <button class="movie-list-item-button"><a href="#" target="_blank"
+                        <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                                 class="btn">Watch</a></button>
                     </div>
                     <div class="movie-list-item">
@@ -183,7 +186,7 @@
                             alt="" class="movie-list-item-img">
                         <span class="movie-list-item-title">Extraordinary Attorney Woo</span>
 
-                        <button class="movie-list-item-button"><a href="#" target="_blank"
+                        <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                                 class="btn">Watch</a></button>
                     </div>
                     <div class="movie-list-item">
@@ -191,14 +194,14 @@
                             alt="" class="movie-list-item-img">
                         <span class="movie-list-item-title">Vincenzo</span>
 
-                        <button class="movie-list-item-button"><a href="#" target="_blank"
+                        <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                                 class="btn">Watch</a></button>
                     </div>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </div>
         </div>
-        <h1 class="movie-list-title m2">Animes</h1>
+        <h1 class="movie-list-title m2" id="anime">ANIMES</h1>
         <div class="movie-list-wrapper mr2">
             <div class="movie-list">
                 <div class="movie-list-item">
@@ -206,7 +209,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Fullmetal Alchemist: Brotherhood</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -214,7 +217,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">A Silent Voice</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -222,7 +225,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Haikyu!!</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -230,7 +233,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Hunter x Hunter</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -238,7 +241,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">wistoria wand and sword</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -246,15 +249,15 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Dragon Ball</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
-                    <img src="images/sevem.jpg"
+                    <img src="Images/sevem.jpg"
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">The Seven Deadly Sins </span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -262,14 +265,14 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">The Promised Neverland</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
             </div>
             <i class="fa-solid fa-chevron-right arrow"></i>
         </div>
     </div>
-        <h1 class="movie-list-title m2">Suggested</h1>
+        <h1 class="movie-list-title m2" id="suggested">SUGGESTED</h1>
         <div class="movie-list-wrapper mr2">
             <div class="movie-list">
                 <div class="movie-list-item">
@@ -277,7 +280,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Attack on Titan</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -285,7 +288,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Jujutsu Kaisen</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -293,7 +296,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Guardian: The Lonely and Great God</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -301,7 +304,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Hotel del Luna</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -309,7 +312,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Business Proposal</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -317,7 +320,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Naruto: Shippuden</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -325,7 +328,7 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">What's Wrong with Secretary Kim</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
                 <div class="movie-list-item">
@@ -333,15 +336,12 @@
                         alt="" class="movie-list-item-img">
                     <span class="movie-list-item-title">Vincenzo</span>
 
-                    <button class="movie-list-item-button"><a href="#" target="_blank"
+                    <button type="button" class="movie-list-item-button"><a href="#" target="_blank"
                             class="btn">Watch</a></button>
                 </div>
             </div>
             <i class="fa-solid fa-chevron-right arrow"></i>
         </div>
-    </div>
-    </div>
-    </div>
     <script src="drama.js"></script>
 </body>
 
