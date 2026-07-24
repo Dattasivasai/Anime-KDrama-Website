@@ -1,141 +1,289 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #000000;
+    padding: 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("Images/login.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+/* Transparent glass login container */
 .wrapper {
     position: relative;
-    width: 800px;
-    height: 500px;
-    background: linear-gradient(90deg, #54880e, #373737);
-    border-radius: 50px;
-    box-shadow: 0 0 60px rgba(0, 0, 0, .3);
-    padding: 60px;
     display: flex;
     align-items: center;
+    width: 800px;
+    height: 500px;
+    padding: 60px;
     overflow: hidden;
+
+    background: rgba(10, 10, 10, 0.35);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
+
 .wrapper .text-right {
     position: absolute;
     top: 60px;
     right: 180px;
+
     color: #ffffff;
-    text-shadow: 0 0 20px rgba(0, 0, 0, .3);
     font-size: 50px;
+    font-family: "Parisienne", cursive;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     user-select: none;
-    font-family: 'Parisienne', cursive;
 }
+
 .wrapper .text-right::before {
-    content: 'Back';
+    content: "Back";
     position: absolute;
     top: 60px;
     right: -50px;
 }
+
 .wrapper img {
     position: absolute;
     right: -40px;
     bottom: -160px;
     width: 60%;
+    opacity: 0.25;
     transform: rotate(260deg);
+    pointer-events: none;
 }
+
 .form-wrapper {
+    position: relative;
     z-index: 2;
 }
+
 .wrapper .form-wrapper.login {
-    transition: .7s ease-in-out;
-    transition-delay: .7s;
+    transition: transform 0.7s ease-in-out;
+    transition-delay: 0.7s;
 }
+
 .wrapper.active .form-wrapper.login {
-    transition-delay: 0s;
     transform: translateX(-400px);
+    transition-delay: 0s;
 }
+
 .wrapper .form-wrapper.register {
     position: absolute;
     margin-top: 15px;
     transform: translateX(-400px);
-    transition: .7s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 }
+
 .wrapper.active .form-wrapper.register {
-    transition-delay: .7s;
     transform: translateX(0);
+    transition-delay: 0.7s;
 }
+
 h2 {
+    color: #ffffff;
     font-size: 2em;
     text-align: center;
-    color: #f2f2f2;
 }
+
+/* Input fields */
 .input-box {
     position: relative;
     width: 320px;
     margin: 30px 0;
 }
+
 .input-box input {
     width: 100%;
     height: 50px;
-    background: transparent;
-    border: 2px solid #f2f2f2;
-    outline: none;
+    padding: 0 20px 0 45px;
+
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 40px;
+    outline: none;
+
     font-size: 1em;
-    color: #f2f2f2;
-    padding: 0 20px 0 40px;
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+.input-box input:focus {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: #ffffff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
 .input-box input::placeholder {
-    color: rgba(255, 255, 255, .3);
+    color: rgba(255, 255, 255, 0.55);
 }
+
 .input-box .icon {
     position: absolute;
+    top: 50%;
     left: 15px;
-    color: #f2f2f2;
+    z-index: 2;
+
+    color: #ffffff;
     font-size: 1.2em;
-    line-height: 55px;
+
+    transform: translateY(-50%);
 }
+
+/* Forgot password */
 .forgot-pass {
     margin: -15px 0 15px 15px;
 }
+
 .forgot-pass a {
-    color: #f2f2f2;
-    font-size: .9em;
+    color: #ffffff;
+    font-size: 0.9em;
     text-decoration: none;
 }
+
 .forgot-pass a:hover {
     text-decoration: underline;
 }
+
+/* Login and Register buttons */
 button {
     width: 100%;
     height: 45px;
-    background: #e6e1e1;
+
+    color: #111111;
+    background: rgba(255, 255, 255, 0.9);
+
     border: none;
-    outline: none;
     border-radius: 40px;
-    cursor: pointer;
+    outline: none;
+
     font-size: 1em;
-    color: #54880e;
-    font-weight: 500;
-}
-.sign-link {
-    font-size: .9em;
-    text-align: center;
-    margin: 25px 0;
-}
-.sign-link p {
-    color: #f2f2f2;
-}
-.sign-link p a {
-    color: #f2f2f2;
-    text-decoration: none;
     font-weight: 600;
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
+
+button:hover {
+    color: #000000;
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Login/Register switch links */
+.sign-link {
+    margin: 25px 0;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.sign-link p {
+    color: #ffffff;
+}
+
+.sign-link p a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 .sign-link p a:hover {
     text-decoration: underline;
+}
+
+/* Tablet and mobile */
+@media screen and (max-width: 850px) {
+    .wrapper {
+        width: 95%;
+        max-width: 600px;
+        height: 520px;
+        padding: 45px;
+    }
+
+    .wrapper .text-right {
+        right: 90px;
+        font-size: 42px;
+    }
+
+    .wrapper img {
+        opacity: 0.15;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .wrapper {
+        justify-content: center;
+        width: 100%;
+        height: 570px;
+        padding: 35px 25px;
+        border-radius: 30px;
+    }
+
+    .wrapper .text-right {
+        display: none;
+    }
+
+    .wrapper img {
+        display: none;
+    }
+
+    .form-wrapper {
+        width: 100%;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    .wrapper .form-wrapper.register {
+        left: 25px;
+        width: calc(100% - 50px);
+    }
+
+    .wrapper.active .form-wrapper.login {
+        transform: translateX(-120%);
+    }
+
+    .wrapper .form-wrapper.register {
+        transform: translateX(-120%);
+    }
 }
