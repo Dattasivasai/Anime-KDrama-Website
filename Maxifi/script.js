@@ -1,72 +1,73 @@
 const wrapper = document.querySelector(".wrapper");
 
 function registerActive() {
-    wrapper.classList.add("active");
+    if (wrapper) {
+        wrapper.classList.add("active");
+    }
 }
 
 function loginActive() {
-    wrapper.classList.remove("active");
+    if (wrapper) {
+        wrapper.classList.remove("active");
+    }
 }
 
 const loginForm = document.getElementById("login-form");
 const registerForm = document.getElementById("register-form");
 const forgotPassword = document.getElementById("forgot-password");
 
-loginForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+if (loginForm) {
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    const email = document
-        .getElementById("login-email")
-        .value
-        .trim();
+        const emailInput = document.getElementById("login-email");
+        const passwordInput = document.getElementById("login-password");
 
-    const password = document
-        .getElementById("login-password")
-        .value;
+        const email = emailInput ? emailInput.value.trim() : "";
+        const password = passwordInput ? passwordInput.value : "";
 
-    if (!email || !password) {
-        alert("Please enter your email and password.");
-        return;
-    }
+        if (!email || !password) {
+            alert("Please enter your email and password.");
+            return;
+        }
 
-    // Temporary frontend-only login.
-    window.location.href = "index.html";
-});
+        // Temporary frontend-only login.
+        window.location.href = "index.html";
+    });
+}
 
-registerForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+if (registerForm) {
+    registerForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    const name = document
-        .getElementById("register-name")
-        .value
-        .trim();
+        const nameInput = document.getElementById("register-name");
+        const emailInput = document.getElementById("register-email");
+        const passwordInput = document.getElementById("register-password");
 
-    const email = document
-        .getElementById("register-email")
-        .value
-        .trim();
+        const name = nameInput ? nameInput.value.trim() : "";
+        const email = emailInput ? emailInput.value.trim() : "";
+        const password = passwordInput ? passwordInput.value : "";
 
-    const password = document
-        .getElementById("register-password")
-        .value;
+        if (!name || !email || !password) {
+            alert("Please complete all registration fields.");
+            return;
+        }
 
-    if (!name || !email || !password) {
-        alert("Please complete all registration fields.");
-        return;
-    }
+        if (password.length < 6) {
+            alert("Password must contain at least 6 characters.");
+            return;
+        }
 
-    if (password.length < 6) {
-        alert("Password must contain at least 6 characters.");
-        return;
-    }
+        alert("Registration completed. You can now log in.");
 
-    alert("Registration completed. You can now log in.");
+        registerForm.reset();
+        loginActive();
+    });
+}
 
-    registerForm.reset();
-    loginActive();
-});
-
-forgotPassword.addEventListener("click", function (event) {
-    event.preventDefault();
-    alert("Password recovery is not available yet.");
-});
+if (forgotPassword) {
+    forgotPassword.addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Password recovery is not available yet.");
+    });
+}
